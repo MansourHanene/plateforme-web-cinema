@@ -1,0 +1,63 @@
+
+ <!-- ##### Header Area End ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/img/actualite.jpg);">
+    <div class="container h-50">
+    <div class="row h-50 align-items-center">
+    <div class="col-12">
+    <div class="breadcrumb-content">
+    <h2></h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+  <br>
+  <!-- ##### Archive Post Area Start ##### -->
+  <div class="archive-post-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-20 col-xl-12">
+                <div class="archive-posts-area bg-white p-30 mb-30 box-shadow">
+                        <div class="section-heading">
+                                <h1 >GERER ACTUALITE</h1>
+                        </div>
+
+                        <button  class="btn mag-btn w-20" (click)="ajouter()">Ajouter Actualite</button>
+                        <div class="col-lg-2"  style=" float: right; clear: both;">
+                            <mat-form-field appearance="standard" color="accent" style="right: 20px;">
+                                <mat-label>Search</mat-label>
+                                <input matInput id="search" placeholder="search" (keyup)="search($event.target.value)" >
+                              </mat-form-field>
+                        </div>
+<br>
+
+                        <div class="row" style="width: 100%;">
+
+                            <!-- Single Blog Post -->
+                            <div style="margin-top:10px;"class="col-12 col-md-4 col-lg-4" *ngFor="let ac of actu | async ">
+                                <div class="single-blog-post style-4 mb-30">
+                                    <div class="single-trending-post" >
+                                        <img src="assets/img/bg-img/19.jpg" alt="">
+                                        <div class="post-content" style=" margin-left: 70px;">
+                                            <button class="btn btn-outline-warning mb-2 mr-2" (click)="modifier(ac.id)" >Modifier</button>
+                                            <button class="btn btn-outline-light mb-2 mr-2" (click)="remove(ac.id)">Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <div class="post-content" style="margin-top: 3px;">
+                                         <div class="post-meta d-flex">
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> {{ac.date_actualite | date}}</a>
+                                        </div>
+                                        <a href=""  class="post-title" >{{ac.titre_actualite}}</a>
+
+                                        <div class="post-meta d-flex">
+                                            <a href="#">aaaa  {{ac.id}}</a>
+                                        </div>
+                                    </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   </div>

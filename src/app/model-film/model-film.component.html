@@ -1,0 +1,59 @@
+<div class="Container">
+    
+  <h2 > Ajouter Film </h2>
+
+<!--nom , categorie , bande annonce , affiche (image), cible , details , durée , prix--> 
+
+<form class="example-form" (ngSubmit)="onSubmit()" >
+
+  <mat-form-field color="accent"  class="example-full-width" >
+    <mat-label >Titre</mat-label>
+    <input matInput placeholder="titre Film" [(ngModel)]="film.titre" name="titre" />
+  </mat-form-field>
+
+  <mat-form-field color="accent" class="example-full-width">
+      <mat-label>Bande Annance</mat-label>
+      <input matInput placeholder="Bande Annance"  [(ngModel)]="film.ba" name="ba"/>
+    </mat-form-field>
+
+    <mat-form-field color="accent"  class="example-full-width">
+      <mat-label>Durée</mat-label>
+      <input matInput placeholder="duree"  [(ngModel)]="film.duree" name="duree"/>
+    </mat-form-field>
+
+    <mat-form-field color="accent"  >
+      <mat-label>Prix</mat-label>
+      <input matInput type="number" placeholder="prix"  [(ngModel)]="film.prix" name="prix" class="example-right-align">
+      <span matSuffix>DT</span>
+    </mat-form-field>
+
+    <mat-form-field color="accent"  class="example-full-width">
+      <mat-label>Cible</mat-label>
+      <input matInput placeholder="cible"  [(ngModel)]="film.cible" name="cible" >
+    </mat-form-field>
+
+  <mat-form-field color="accent"  class="example-full-width">
+    <mat-label>details</mat-label>
+    <textarea matInput placeholder="details"  [(ngModel)]="film.details" name="details"></textarea>
+  </mat-form-field>
+  <div class="container ">
+    <div></div>
+    <label for="">Photo</label>
+    <button mat-stroked-button color="primary" (click)="fileInput.click()">choisir Photo</button>
+         <input hidden (change)="onFileSelected()" 
+         #fileInput type="file" id="file" [(ngModel)]="film.photo">
+  </div>
+ 
+  <hr>
+  <div class="aa">
+    <button class="mat-raised-button" [mat-dialog-close]>Annuler</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button class="mat-raised-button mat-accent" type="submit"  >Ajouter</button>
+
+</div>
+</form>
+
+
+
+</div>

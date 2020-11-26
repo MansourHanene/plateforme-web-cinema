@@ -1,0 +1,46 @@
+
+   <form class="example-form">
+    <h2 mat-dialog-title  >Ajouter  Programme film</h2>
+    <hr>
+
+    <mat-form-field  appearance="standard"   style=" width: 451px;left: 10px;">
+        <mat-label>Titre </mat-label>
+        <input matInput placeholder="titre Actualite"   name="titre" matNativeControl required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Film</mat-label>
+        <select matNativeControl required>
+            <option value="parasite">parasite</option>
+            <option value="train to busan">train to busan</option>
+            <option value="escape from pretoria">escape from pretoria</option>
+            </select>
+        </mat-form-field>
+      <mat-form-field>
+        <mat-label>Debut</mat-label>
+        <input matInput [matDatepicker]="dp" type="datetime" matNativeControl required>
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Fin </mat-label>
+        <input matInput [matDatepicker]="dp" type="datetime" matNativeControl required>
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="standard"  style=" width: 451px;left: 10px;">
+        <mat-label>Description  </mat-label>
+        <textarea matInput placeholder="contenu Actualite" name="contenu" ></textarea>
+      </mat-form-field>
+      
+    <hr>
+    <mat-dialog-actions style=" margin-left: 270px;">
+    <button class="mat-raised-button" >Annuler</button>
+    <button mat-raised-button   color="accent" style="color: #ffff;margin-left: 5px;">Ajouter</button>
+    </mat-dialog-actions>
+    <br>
+          <br>
+    
+      
+    

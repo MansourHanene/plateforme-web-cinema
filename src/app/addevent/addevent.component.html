@@ -1,0 +1,95 @@
+
+    <mat-dialog-content >
+        <mat-form-field class="example-full-width" color="accent">
+                <mat-label >Titre </mat-label>
+            <input  matInput type="text" [(ngModel)]="event.titre">
+           
+        </mat-form-field>
+    
+    </mat-dialog-content>
+    
+    <br>
+     
+    
+    
+    
+    <mat-dialog-content >
+      
+            <mat-form-field class="example-full-width" color="accent" > 
+                    <mat-label >Lieu </mat-label>
+                <input matInput
+                         class="example-right-align" [(ngModel)]="event.lieu"
+                      >
+            </mat-form-field>
+        
+        </mat-dialog-content>
+    
+    
+    
+    <mat-dialog-content>
+    <mat-form-field color="accent">
+            <mat-label >Date Début :</mat-label>
+            <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="event.datedeb">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+    </mat-dialog-content>
+    
+    <mat-dialog-content>
+      <mat-form-field color="accent">
+            <mat-label >Date fin : </mat-label>
+            <input matInput [matDatepicker]="myDatepicker1" [(ngModel)]="event.datefin">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker1></mat-datepicker>
+      </mat-form-field>
+    </mat-dialog-content>
+      
+    
+    
+    <mat-form-field color="accent" >
+        <mat-label >Prix </mat-label>
+        <input matInput type="number" class="example-right-align" [(ngModel)]="event.prix">
+        <span matPrefix>dt&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+    
+      <br>
+      <mat-dialog-content >
+      
+            <mat-form-field class="example-full-width" color="accent" > 
+                    <mat-label >Description </mat-label>
+    
+                <input matInput [(ngModel)]="event.description"
+                         class="example-right-align">
+                       
+                      
+            </mat-form-field>
+        
+        </mat-dialog-content>
+    
+    <br>
+    <br>
+      <mat-label >Photo </mat-label>
+    
+      <button mat-stroked-button color="primary" (click)="fileInput.click()">choisir Photo</button>
+         <input hidden (change)="onFileSelected()" 
+         #fileInput type="file" id="file" [(ngModel)]="event.photo">
+    
+    <br>
+    
+    <mat-dialog-actions>
+    
+    <div class="aa">
+        <button class="mat-raised-button" [mat-dialog-close]>Annuler</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="mat-raised-button mat-accent" type="submit" (click)="ajouter()" >Ajouter</button>
+    
+    </div>
+    
+    </mat-dialog-actions>
+    
+          
+    
+      
+    

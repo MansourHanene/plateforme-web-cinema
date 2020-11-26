@@ -1,0 +1,94 @@
+<!-- ##### Header Area End ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/img/event.jpg);">
+    <div class="container h-50">
+    <div class="row h-50 align-items-center">
+    <div class="col-12">
+    <div class="breadcrumb-content">
+    <h2></h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+  <br>
+  
+   
+    <!-- ##### Archive Post Area Start ##### -->
+    <div class="archive-post-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-20 col-xl-12">
+                    <div class="archive-posts-area bg-white p-30 mb-30 box-shadow">
+                            <div class="section-heading">
+                                    <h1 >GERER EVENEMENTS</h1>
+                                    <ul *ngIf="events">
+                                            <li *ngFor="let d of events ;let i=index"> 
+                                                    {{d.id}}
+                                            </li>
+                                           
+            
+                                        </ul>
+                            </div>
+
+                 <div style="display:inline;margin-left:850px;" >   
+                  
+                   
+                     <button  class="btn mag-btn w-20" (click)="openDialog()">+ Evénement</button>
+                            </div>
+
+                          
+                            <br>
+                        <!-- Single Catagory Post -->
+                        <div class="single-catagory-post d-flex flex-wrap" *ngFor="let ev of events ;let i=index">
+                        
+                            <!-- Thumbnail -->
+                            <div class="post-thumbnail bg-img" style="background-image: url(img/bg-img/42.jpg);">
+                                <img src="assets/img/bg-img/20.jpg" alt="">                         
+                               </div>
+
+                            <!-- Post Contetnt -->
+                            <div class="post-content">
+                                <div class="post-meta">
+                                <a href="#">MAY 8, 2018 / </a>
+                            
+                                <a href="#">{{ev.lieu}}</a>
+                                   <br>
+                                <a href="#"> {{ev.prix}} </a>
+                                
+                                   
+                                </div>
+                               <h3>{{ev.titre}}</h3>
+                                <!-- Post Meta -->
+                               
+                                <p>
+                                        {{ev.description}}               
+                                              
+
+                                </p>
+                               <br>
+                                <a  type="button" class="btn btn-primary" style=" color: #ffff;margin-right: 3px;" (click)="openDialog2(ev.id)" >Modifier</a>
+                                <a  type="button" class="btn btn-dark" style=" color: #ffff;"  (click)="remove(ev.id)">Supprimer</a>
+                            
+                                
+                            </div>
+                        </div>
+
+                       
+                        <!-- Pagination -->
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="ti-angle-right"></i></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+
+               
+
+              
+  
+  

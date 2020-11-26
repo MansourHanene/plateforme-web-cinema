@@ -1,0 +1,56 @@
+<div class="Container">
+    
+    <h2 > Modifier Film </h2>
+  
+  <!--nom , categorie , bande annonce , affiche (image), cible , details , durée , prix--> 
+  
+  <form class="example-form">
+  
+    <mat-form-field color="accent"  class="example-full-width" >
+      <mat-label >Titre</mat-label>
+      <input matInput placeholder=" " >
+    </mat-form-field>
+  
+    <mat-form-field color="accent" class="example-full-width">
+        <mat-label>Bande Annance</mat-label>
+        <input matInput placeholder=" " >
+      </mat-form-field>
+  
+      <mat-form-field color="accent"  class="example-full-width">
+        <mat-label>Durée</mat-label>
+        <input matInput placeholder=" " >
+      </mat-form-field>
+  
+      <mat-form-field color="accent"  >
+        <mat-label>Prix</mat-label>
+        <input matInput type="number" class="example-right-align">
+        <span matSuffix>DT</span>
+      </mat-form-field>
+  
+      <mat-form-field color="accent"  class="example-full-width">
+        <mat-label>Cible</mat-label>
+        <input matInput placeholder=" " >
+      </mat-form-field>
+  
+    <mat-form-field color="accent"  class="example-full-width">
+      <mat-label>details</mat-label>
+      <textarea matInput placeholder=" "></textarea>
+    </mat-form-field>
+    <div class="container ">
+      <div></div>
+      <label for="">Photo</label>
+      <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+    </div>
+   
+    <div class="container">
+        <mat-chip-list aria-label="Fish selection">
+            <mat-chip (click)="onNoClick()">Cancel</mat-chip>
+            <mat-chip color="accent" selected>Ajouter</mat-chip>
+          </mat-chip-list>
+    </div>
+  </form>
+  
+  
+  
+  </div>
+  

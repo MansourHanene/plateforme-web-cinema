@@ -1,0 +1,28 @@
+<form class="example-form" (ngSubmit)="onSubmit()">
+  <h2 mat-dialog-title  >Modifier Actualite</h2>
+  <hr>
+
+  <mat-form-field  appearance="standard"   style=" width: 451px;left: 10px;">
+      <mat-label>Titre Actualite</mat-label>
+      <input matInput placeholder="titre Actualite"  required [(ngModel)]="actualite.titre_actualite" name="titre"/>
+    </mat-form-field>
+    <mat-form-field  appearance="standard"  style=" width: 451px;left: 10px;">
+      <mat-label>Description Actualite</mat-label>
+      <input matInput placeholder="description Actualite" required [(ngModel)]="actualite.description_actualite"  name="desc" />
+    </mat-form-field>
+    <mat-form-field appearance="standard"  style=" width: 451px;left: 10px;">
+      <mat-label>Contenu Actualite</mat-label>
+      <textarea matInput placeholder="contenu Actualite" required [(ngModel)]="actualite.contenu_actualite" name="contenu" ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="standard"  style=" width: 451px;left: 10px;">
+      <mat-label>date Actualite</mat-label>
+      <input matInput type="date" required [(ngModel)]="actualite.date_actualite" placeholder="date Actualite" >
+    </mat-form-field>
+
+  <hr>
+  <mat-dialog-actions style=" margin-left: 270px;">
+  <button class="mat-raised-button" >Annuler</button>
+  <button mat-raised-button type="submit" style="background-color: #ffc107;color: #ffff;margin-left: 5px;">Modifier</button>
+  </mat-dialog-actions>
+  <br>
+        <br>

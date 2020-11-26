@@ -1,0 +1,100 @@
+
+   <form class="example-form" (ngSubmit)="onSubmit()">
+
+    <h2 mat-dialog-title>Modifier Evenement {{event.titre}}</h2>
+   
+    <input type="text">
+    <mat-dialog-content >
+        <mat-form-field class="example-full-width" color="accent" >
+                <mat-label >Titre </mat-label>
+            <input  matInput type="text">
+           
+        </mat-form-field>
+    
+    </mat-dialog-content>
+    
+    <br>
+     
+    
+    
+    
+    <mat-dialog-content >
+      
+            <mat-form-field class="example-full-width" color="accent" > 
+                    <mat-label >Lieu </mat-label>
+                <input matInput
+                         class="example-right-align" 
+                      >
+            </mat-form-field>
+        
+        </mat-dialog-content>
+    
+    
+    
+    <mat-dialog-content>
+    <mat-form-field color="accent">
+            <mat-label >Date Début :</mat-label>
+            <input matInput [matDatepicker]="myDatepicker" >
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+    </mat-dialog-content>
+    
+    <mat-dialog-content>
+      <mat-form-field color="accent">
+            <mat-label >Date fin : </mat-label>
+            <input matInput [matDatepicker]="myDatepicker1" >
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker1></mat-datepicker>
+      </mat-form-field>
+    </mat-dialog-content>
+      
+    
+    
+    <mat-form-field color="accent" >
+        <mat-label >Prix </mat-label>
+        <input matInput type="number" class="example-right-align" >
+        <span matPrefix>dt&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+    
+      <br>
+      <mat-dialog-content >
+      
+            <mat-form-field class="example-full-width" color="accent" > 
+                    <mat-label >Description </mat-label>
+    
+                <input matInput 
+                         class="example-right-align">
+                       
+                      
+            </mat-form-field>
+        
+        </mat-dialog-content>
+    
+    <br>
+    <br>
+      <mat-label >Photo </mat-label>
+    
+      <button mat-stroked-button color="primary" (click)="fileInput.click()">choisir Photo</button>
+         <input hidden (change)="onFileSelected()" 
+         #fileInput type="file" id="file">
+    
+    <br>
+    
+    <mat-dialog-actions>
+    
+    <div class="aa">
+        <button class="mat-raised-button" [mat-dialog-close]>Annuler</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="mat-raised-button mat-accent" type="submit" >Modifier</button>
+    
+    </div>
+    
+    </mat-dialog-actions>
+    
+          
+    
+      
+    

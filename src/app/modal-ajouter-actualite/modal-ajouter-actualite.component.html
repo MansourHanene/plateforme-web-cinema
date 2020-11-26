@@ -1,0 +1,29 @@
+
+   <form class="example-form">
+    <h2 mat-dialog-title  >Ajouter Actualite</h2>
+    <hr>
+    <mat-form-field  appearance="standard"  color="accent" style=" width: 451px;">
+        <mat-label>Titre Actualite</mat-label>
+        <input matInput placeholder="titre Actualite" [(ngModel)]="actualite.titre_actualite" name="titre" />
+      </mat-form-field>
+      <mat-form-field  appearance="standard" color="accent" style=" width: 451px;">
+        <mat-label>Description Actualite</mat-label>
+        <input matInput placeholder="description Actualite"  [(ngModel)]="actualite.description_actualite" name="description"/>
+      </mat-form-field>
+      <mat-form-field appearance="standard" color="accent" style=" width: 451px;">
+        <mat-label>Contenu Actualite</mat-label>
+        <textarea matInput placeholder="contenu Actualite" [(ngModel)]="actualite.contenu_actualite" name="contenu"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="standard" color="accent" style=" width: 451px;">
+        <mat-label>date Actualite</mat-label>
+        <input matInput type="date" placeholder="date Actualite" [(ngModel)]="actualite.date_actualite" name="date">
+      </mat-form-field>
+    <hr>
+    <mat-dialog-actions style=" margin-left: 270px;">
+    <button class="mat-raised-button" [mat-dialog-close]>Annuler</button>
+    <button mat-raised-button color="accent" style="color: #ffff;margin-left: 5px;" (click)="save()" >Ajouter</button>
+    </mat-dialog-actions>
+
+
+
+

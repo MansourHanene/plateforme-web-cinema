@@ -1,0 +1,87 @@
+<!-- ##### Header Area End ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/41.jpg);">
+    <div class="container h-100">
+    <div class="row h-100 align-items-center">
+    <div class="col-12">
+    <div class="breadcrumb-content">
+    <h2>Films</h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                            <li class="breadcrumb-item"><a href="#">Gestion Films</a>
+                                <ul *ngIf="films">
+                                    <li *ngFor="let d of films ;let i=index"> 
+                                            
+                                    </li>
+                                   
+    
+                                </ul></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- ##### Archive Post Area Start ##### -->
+
+     <div class="container" >
+        <div class=" bg-white mt-10 mb-30 p-30 box-shadow">
+           
+            <button mat-raised-button color="accent" (click)="AfficherModelAjouterFilm()">Ajouter Film</button>
+            <div class="col-lg-2"  style=" float: right; clear: both;">
+                <mat-form-field appearance="standard" color="accent" style="right: 20px;">
+                    <mat-label>Search</mat-label>
+                    <input matInput id="search" placeholder="search" >
+                  </mat-form-field>
+            </div>
+            <div class="mt-15" >
+                <div class="featured-video-posts">
+                    <div class="row">
+                        <div class="col-4 col-lg-3" *ngFor="let fl of films ;let i=index">
+                            <!-- Single Featured Post -->
+                            <div class="single-featured-post">
+                                <!-- Thumbnail -->
+                             
+                                    <div class="post-thumbnail mb-30">
+                                        <img src="assets/img/bg-img/22.jpg" alt="">
+                                       
+                                  <div class="video-play">
+                                    <button type="button"  class="btn btn-warning" (click)="AfficherModelModifierFilm()">Modifier</button> 
+                                    <button type="button" class="btn btn-secondary"(click)="remove(fl.id)">Supprimer</button>
+                                  </div>
+                                       
+                                    </div>
+                                
+                         
+                               
+                                <!-- Post Contetnt -->
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <a [routerLink]="['/admin/detail']" >{{fl.titre}}</a>
+                                    </div>
+                                    <a  class="post-title">{{fl.cible}}</a>
+                                    <p>{{fl.details}}</p>
+                                </div>
+                            </div>
+                             
+    
+                         </div>  
+                           
+                </div>    
+            </div>
+            
+        </div> 
+     </div>
+

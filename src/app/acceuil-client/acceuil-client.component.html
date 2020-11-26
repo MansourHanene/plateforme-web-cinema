@@ -1,0 +1,177 @@
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/21.jpg);">
+    <div class="container h-50">
+    <div class="row h-50 align-items-center">
+    <div class="col-12">
+    <div class="breadcrumb-content">
+    <h2></h2>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+  <br>
+      <!-- ##### Mag Posts Area Start ##### -->
+      <section class="mag-posts-area d-flex flex-wrap">
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h1>SORTIES DE LA SEMAINE</h1>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+
+
+                     <div class="single-trending-post">
+                        <img src="assets/img/bg-img/parasite.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">Thriller/Comédie</a>
+                            <a href="video-post.html" class="post-title">Parasite</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="single-blog-post d-flex">
+                <div class="single-trending-post">
+                    <img src="assets/img/bg-img/silent.jpg" alt="">
+                    <div class="post-content">
+                        <a href="#" class="post-cata">Animation/Drame</a>
+                        <a href="video-post.html" class="post-title">A Silent Voice</a>
+                    </div>
+                </div>
+               </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+           <!-- Sidebar Widget -->
+           <div class="single-sidebar-widget mb-30">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h1>FILMS AU CINÉMA</h1>
+            </div>
+
+    <!-- Single Catagory Post -->
+<div class="single-catagory-post d-flex flex-wrap" *ngFor="let ac of film | async ">
+    <!-- Thumbnail -->
+    <div class="post-thumbnail bg-img" style="background-image: url(assets/img/bg-img/ac.photo);">
+
+    </div>
+      <!-- Post Contetnt -->
+      <div class="post-content">
+        <div class="post-meta">
+            <a href="archive.html">Animation/Drame</a>
+        </div>
+        <a href="video-post.html" class="post-title">{{ac.titre}}</a>
+
+        <p>{{ac.details}}</p>
+             <div class="youtube-channel-content">
+                <a href="#" class="btn btn-primary" style="margin-right: 5px;"> Detail</a>
+                <a href="#" class="btn btn-warning"> Reserver</a>
+            </div>
+    </div>
+    <br><br> <br> <br>
+    <div class="d-flex align-items-center" style="margin-left: 510px;">
+        <a href="#" class="reply" style="color:rgb(255, 0, 128);">voir la suite</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+       <!-- Related Post Area -->
+       <div class="related-post-area bg-white mb-40 px-40 pt-40 ">
+        <!-- Section Title -->
+        <div class="section-heading">
+            <h1>News</h1>
+        </div>
+
+        <div class="row">
+            <!-- Single Blog Post -->
+            <div class="col-6 col-md-6 col-lg-3" style="flex:0 0 100% ;max-width:100%; ">
+              <!--  ddgtryhdtrlhugif -->
+                <div class="single-blog-post style-4 mb-50" *ngFor="let acc of actu | async ">
+                    <div class="post-thumbnail">
+                        <img src="assets/img/bg-img/15.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">{{acc.titre_actualite}}</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex align-items-center" style="margin-left: 510px;">
+                <a href="#" class="reply" style="color:rgb(255, 0, 128);">voir la suite</a>
+            </div>
+            </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Right Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area right-sidebar mt-30 mb-30 box-shadow">
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Social Followers Info -->
+                <div class="section-heading">
+                    <h1> Météo</h1>
+                </div>
+<app-weather-widget></app-weather-widget>
+            </div>
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h1>Agenda</h1>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <div>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+
+    </div>
+    <!-- ##### Mag Posts Area End ##### -->
